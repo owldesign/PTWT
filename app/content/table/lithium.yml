@@ -1,15 +1,9 @@
 element: "lithium"
 name: "Lithium"
 summary: "HTML5 Responsive one page template. Includes SCSS, Coffeescript files. Built using Hedgehog front-end framework."
-demoUrl: "http://demo.com"
-downloadUrl: "http://download.com"
+demoUrl: "http://owl-design.net/demos/lithium/"
+downloadUrl: "http://freebiesbug.com/code-stuff/lithium-html5-responsive-one-page-template/"
 githubUrl: "http://github.com"
 slides:
   -
-    image: "http://www.stevensegallery.com/480/400"
-  -
-    image: "http://www.fillmurray.com/480/400"
-  -
-    image: "http://www.placecage.com/g/480/400"
-  -
-    image: "http://www.placecage.com/c/480/400"
+    image: "lithium-featured-image.jpg"

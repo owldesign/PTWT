@@ -116,7 +116,7 @@ button { border: none; outline: none; background: #53d6cc; cursor: pointer; colo
 #theTable .element { text-align: center; }
 #theTable .element span { display: block; }
 #theTable .element .element-name { font-family: Verdana, sans-serif; font-size: 8px; color: #626262; padding: 10px 0 5px 0; }
-#theTable .element .atomic-number { font-weight: bold; font-size: 10px; padding: 0 0 3px 0; }
+#theTable .element .atomic-number { font-family: Verdana, sans-serif; font-weight: bold; font-size: 10px; padding: 0 0 3px 0; }
 #theTable .element .element-symbol { font-family: "Open Sans", sans-serif; font-size: 20px; font-weight: 800; color: #2f2f2f; }
 #theTable .row:after { content: ""; display: table; clear: both; }
 #theTable .row.push { margin-top: 30px; }
@@ -136,15 +136,16 @@ button { border: none; outline: none; background: #53d6cc; cursor: pointer; colo
 @media screen and (max-width: 460px) { #detail-container.detail-inner { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
 @media screen and (min-width: 320px) and (max-width: 742px) { #detail-container.detail-inner { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
 @media screen and (min-width: 742px) and (max-width: 1024px) { #detail-container.detail-inner { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
-#detail-container .template-slider { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)"; filter: alpha(opacity=0); zoom: 1; }
+#detail-container .template-slider { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)"; filter: alpha(opacity=0); zoom: 1; padding: 20px 0 0 0; margin-bottom: 30px; }
 #detail-container .template-slider:after { content: ""; display: table; clear: both; }
 #detail-container .template-slider img { max-width: 100%; }
 #detail-container .close-modal { position: fixed; top: 0; right: 0; margin: 0; height: 40px; width: 100%; }
-#detail-container .template-slider, #detail-container .template-slider .swiper-slide { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; width: 100%; padding: 0 !important; height: 400px; background-size: cover; }
+#detail-container .template-slider, #detail-container .template-slider .swiper-slide { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; width: 100%; text-align: center; height: 100%; background: #e5e7e9; }
 @media screen and (max-width: 460px) { #detail-container .template-slider, #detail-container .template-slider .swiper-slide { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
 @media screen and (min-width: 320px) and (max-width: 742px) { #detail-container .template-slider, #detail-container .template-slider .swiper-slide { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
 @media screen and (min-width: 742px) and (max-width: 1024px) { #detail-container .template-slider, #detail-container .template-slider .swiper-slide { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; } }
-#detail-container .template-slider { height: 440px; }
+#detail-container .template-slider img, #detail-container .template-slider .swiper-slide img { width: 100%; }
+#detail-container .template-slider { height: 100%; }
 #detail-container .info { float: left; direction: ltr; padding-left: 10px; padding-right: 10px; width: 50%; float: left; direction: ltr; padding-left: 10px; padding-right: 10px; display: block !important; float: none !important; margin-left: auto !important; margin-right: auto !important; clear: both !important; }
 #detail-container .info h1 { margin-bottom: 10px; }
 #detail-container .info .view-on-github { padding-top: 15px; }

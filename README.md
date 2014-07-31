@@ -1,4 +1,12 @@
-Frontend Framework 
+Periodic Table of Web Templates
 ========
 
-Built using Grunt
+All templates are free to use.
+
+
+Available Web Templates:
+
+* Lithium
+
+
+Stay tunned for more...

@@ -28,8 +28,8 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           {{#each slides}}
-          <div class="swiper-slide" style="background: url({{image}}) no-repeat center top;">
-
+          <div class="swiper-slide">
+            <img src="images/{{image}}" />
           </div>
           {{/each}}
         </div>
@@ -249,7 +249,7 @@
         <div class="element" data-target="fermium"><span class="element-name">fermium</span><span class="atomic-number">100</span><span class="element-symbol">Fm</span></div>
         <div class="element" data-target="mendelevium"><span class="element-name">mendelevium</span><span class="atomic-number">101</span><span class="element-symbol">Md</span></div>
         <div class="element" data-target="nobelium"><span class="element-name">nobelium</span><span class="atomic-number">102</span><span class="element-symbol">No</span></div>
-        <div class="element available" data-target="lawrencium"><span class="element-name">lawrencium</span><span class="atomic-number">103</span><span class="element-symbol">Lr</span></div>
+        <div class="element" data-target="lawrencium"><span class="element-name">lawrencium</span><span class="atomic-number">103</span><span class="element-symbol">Lr</span></div>
       <!-- </section> -->
       </section>
     </section>
