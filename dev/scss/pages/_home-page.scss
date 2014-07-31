@@ -1,0 +1,316 @@
+// -------------------------------------
+// ★ Periodic Table of Web Templates
+// -------------------------------------
+
+
+$columns: 18;
+$rows: 9;
+$columnWidth: 53px;
+$columnHeight: 65px;
+
+
+.table-page {
+  header {
+    position: absolute;
+    left: 140px;
+    top: 70px;
+    width: 50%;
+    @include transition(all .4s ease-out);
+    h1 {
+      text-transform: uppercase;
+      font-size: 28px !important;
+      span {
+        display: block;
+        font-weight: 800;
+        font-size: 38px !important;
+      }
+    }
+    .copy-01 {
+      color: $midgrayColor;
+      margin: 20px 0 0 0;
+      font: {
+        family: $opensans;
+        weight: 400;
+      }
+    }
+    h2 {
+      font: {
+        family: $opensans;
+        weight: 700;
+        size: 14px;
+      }
+      span { font-weight: 800; }
+    }
+
+
+    figure {
+      @include clearfix;
+      img {
+        display: block;
+        float: left;
+        margin-right: 20px;
+        width: 110px;
+      }
+      figcaption {
+        padding-top: 25px;
+      }
+    }
+  }
+
+
+  @include gridle_state(tablet) {
+    header {
+      width: 100%;
+      @include position(relative, auto auto auto auto);
+      margin: 30px auto;
+      .logo {
+        text-align: center;
+        img { float: none; margin: 0 auto 10px auto; }
+      }
+    }
+  }
+
+  @include gridle_state(mobile-alt) {
+    header {
+      width: 100%;
+      @include position(relative, auto auto auto auto);
+      margin: 30px auto;
+      .logo {
+        text-align: center;
+        img { float: none; margin: 0 auto 10px auto; }
+        figcaption {
+          padding: 0;
+          h1 { font-size: 24px !important; span { font-size: 32px !important; }}
+        }
+      }
+    }
+  }
+
+  @include gridle_state(mobile) {
+    header {
+      width: 100%;
+      .logo {
+        text-align: center;
+        img { float: none; margin: 0 auto 10px auto; }
+      }
+    }
+  }
+}
+
+
+#theTable {
+  position: relative;
+  margin: 30px auto;
+  @include gridle(12);
+  @include gridle_no_gutter();
+  .elements { @include clearfix; }
+  .elements > div {
+    position: relative;
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    @include size($columnWidth $columnHeight);
+    background: darken(white, 5);
+    border: 1px solid white;
+    @include box-sizing(border-box);
+    @include opacity(.5);
+    .element-symbol, .element-name, .atomic-number { @include opacity(.3); }
+
+    // AVAILABLE TILE
+    &.available {
+      cursor: pointer;
+      @include opacity(1);
+      @include transition(all .3s ease);
+      .element-symbol, .element-name, .atomic-number { @include opacity(1); }
+
+      &:hover {
+        border: none;
+        background: $tealColor;
+        span { color: white; }
+        @include transform(scale3d(1.5, 1.5, 1));
+        z-index: 50;
+        &:before, &:after { display: none !important; }
+        &:before {
+          content: "";
+          background: $tealColor;
+          display: block;
+          @include size(100%);
+          @include position(absolute, 0px 0px 0px 0px);
+          z-index: -1;
+        }
+
+        &:after {
+          content: "HELLLO";
+          display: block;
+          background: #d5f1b8;
+          @include position(absolute, 5% 0px 0px 0px);
+          @include size(100% 90%);
+          z-index: -2;
+          @include transform(translateX(0px));
+          @include animation(moveRight .2s ease-out 1 forwards);
+          @include animation-delay(.2s);
+          @include pointer-event(none);
+        }
+      }
+    }
+    &.empty {
+      @include opacity(0);
+    }
+  }
+
+  .element {
+    text-align: center;
+    span { display: block; }
+    .element-name {
+      font: {
+        family: Verdana, sans-serif;
+        size: 8px;
+      }
+      color: $midgrayColor;
+      padding: 10px 0 5px 0;
+    }
+    .atomic-number {
+      font-weight: bold;
+      font-size: 10px;
+      padding: 0 0 3px 0;
+    }
+    .element-symbol {
+      font: {
+        family: $opensans;
+        size: 20px;
+        weight: 800;
+      }
+      color: darken($midgrayColor, 20);
+    }
+  }
+
+  .row {
+    @include clearfix;
+    &.push {
+      margin-top: 30px;
+    }
+  }
+
+
+
+  @include gridle_state(tablet) {
+    margin-top: 0;
+    .elements {
+      font-size: 0;
+      text-align: center;
+      & > div {
+        display: inline-block;
+        float: none !important;
+      }
+    }
+    .empty { display: none !important; }
+  }
+
+  @include gridle_state(mobile-alt) {
+    margin-top: 0;
+    .elements {
+      font-size: 0;
+      text-align: center;
+      & > div {
+        display: inline-block;
+        float: none !important;
+      }
+    }
+    .empty { display: none !important; }
+  }
+}
+
+
+
+
+
+.white-popup {
+  position: relative;
+  width: auto;
+  margin: 40px auto 0 auto;
+}
+
+// The Detail Page
+#detail-container {
+  padding: 0 !important;
+
+  &.detail-inner {
+    @include gridle(12);
+    padding: 0 !important;
+  }
+  .template-slider {
+    @include clearfix;
+    @include opacity(0);
+    img { max-width: 100%; }
+  }
+
+  .close-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    @include size(100% 40px);
+  }
+
+  .template-slider, .template-slider .swiper-slide {
+    @include gridle(12);
+    padding: 0 !important;
+    height: 400px;
+    background-size: cover;
+  }
+  .template-slider {
+    height: 440px;
+  }
+
+  .info {
+    h1 {
+      margin-bottom: 10px;
+    }
+    .view-on-github { padding-top: 15px; }
+    @include gridle(6);
+    @include gridle(12, 'mobile-alt');
+    @include gridle_centered();
+  }
+
+  @include gridle_state(mobile-alt) {
+    .template-slider {
+      float: none;
+      @include gridle_no_gutter();
+    }
+
+  }
+
+  .detail-pagination {
+    margin: 15px 0;
+    padding: 0;
+    .swiper-pagination-switch {
+      position: relative;
+      cursor: pointer;
+      border: 1px solid $ltgrayColor;
+      &:before {
+        content: "";
+        display: block;
+        @include size(110%);
+        border: 2px solid lighten($ltgrayColor, 5);
+        border-radius: 180px;
+        @include position(absolute, -2px 0px 0px -2px);
+      }
+      &.swiper-active-switch { background: $tealColor; }
+    }
+  }
+}
+
+
+
+
+
+
+@include keyframes(moveRight) {
+  0% {
+    @include transform(translateX(0));
+  }
+  100% {
+    @include transform(translateX(40px));
+  }
+}

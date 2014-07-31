@@ -1,0 +1,62 @@
+// -------------------------------
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ Typography                 */
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+// -------------------------------
+
+// Variables
+$baseFontSize: 16px;
+$baseLineHeight: 1;
+
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
+
+// Custom Fonts
+// @include font-face(icons, '/css/fonts/od');
+
+// Fonts
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$muli: 'Muli', sans-serif;
+
+// Headers
+$headers:
+  (h-01, 32px, 700, $baseLineHeight, $opensans),
+  (h-02, 14px, 400, $baseLineHeight, $muli),
+  (h-03, 14px, 400, $baseLineHeight, $muli),
+  (h-05, 10px, 400, $baseLineHeight, $muli);
+
+.heading {
+  color: $mainColor;
+  @each $header, $fontSize, $fontWeight, $lineHeight, $fontName in $headers {
+    &.#{$header} {
+      font: {
+        family: $fontName;
+        size: $fontSize;
+        weight: $fontWeight;
+      }
+      line-height: $lineHeight;
+      @if $header == 'h-02' {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Copy
+$copies:
+  (copy-01, 12px, 18px, $muli),
+  (copy-02, 12px, 22px, $muli),
+  (copy-03, 11px, $baseLineHeight, $muli);
+
+@each $copy, $fontSize, $lineHeight, $fontName in $copies {
+  .#{$copy} {
+    font: {
+      family: $fontName;
+      size: $fontSize;
+    }
+    line-height: $lineHeight;
+  }
+}

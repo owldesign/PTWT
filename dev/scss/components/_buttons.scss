@@ -1,0 +1,100 @@
+// -------------------------------------
+// ★ Buttons
+// -------------------------------------
+
+// Variables
+$buttonTextSize: 12px;
+
+
+
+.button {
+  display: inline-block;
+  color: white;
+  letter-spacing: .1em;
+  font: {
+    family: $opensans;
+    weight: 400;
+    size: $buttonTextSize;
+  }
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 35px;
+  @include transition(all .3s ease);
+  &.rounded { border-radius: 3px; }
+  &:hover {
+    @include opacity(.7);
+  }
+  &.view-btn, &.download-btn , &.documentation-btn {
+    display: block;
+    font-size: 14px;
+    background: $tealColor;
+    margin: 10px 0;
+  }
+  &.view-on-github {
+    display: block;
+    padding: 0;
+    margin-top: 10px;
+    color: $midgrayColor;
+    text-transform: capitalize;
+    font-size: 12px;
+    &:before {
+      font-size: 22px;
+      position: relative;
+      top: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+// -------------------------------------
+// ★ Pagers
+// -------------------------------------
+.hero-pagination, .detail-pagination {
+  padding-bottom: 15px;
+  text-align: center;
+  @include clearfix;
+  .swiper-pagination-switch {
+    position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    margin: 0 5px;
+    @include size(8px);
+    border-radius: 180px;
+    background: $ltgrayColor;
+    @include transition(all .3s ease);
+    &.swiper-active-switch {
+      background: darken($ltgrayColor, 10);
+    }
+    &:hover {
+      background: darken($ltgrayColor, 10);
+    }
+  }
+}
+
+// Swiper
+.pager-btn {
+  display: inline-block;
+  background: $tealColor;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  height: 25px;
+  @include appearance(none);
+  @include transition(all .3s ease);
+  &:hover {
+    @include opacity(.7);
+  }
+
+  &.disabled {
+    cursor: default;
+    @include opacity(.4);
+  }
+
+  @include gridle_state(mobile) {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+  }
+}

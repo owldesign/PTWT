@@ -1,0 +1,43 @@
+// -------------------------------------
+// ★ Forms
+// -------------------------------------
+
+// Variables
+$inputBackground: #efefef;
+
+
+
+input {
+  padding: 15px;
+  border: none;
+  color: $midgrayColor;
+  background: $inputBackground;
+  box-shadow: inset 1px 1px 0px darken($inputBackground, 5), 1px 1px 0px white;
+  outline: none;
+  width: 100%;
+  @include box-sizing(border-box);
+  @include appearance(none);
+  @include placeholder { color: $midgrayColor; }
+  @include transition(background .4s ease);
+  &:focus { background: lighten($inputBackground, 3); }
+}
+
+button {
+  border: none;
+  outline: none;
+  background: $tealColor;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font: {
+    weight: 400;
+    size: 12px;
+  }
+  @include appearance(none);
+}
+
+.form-result {
+
+  padding: 15px 0;
+}

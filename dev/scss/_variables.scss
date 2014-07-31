@@ -1,0 +1,20 @@
+// -------------------------------------
+// ★ Variables
+// -------------------------------------
+@import "mixins"; // Custom mixins, functions, etc
+
+// Sizes
+$desktop: em(960);
+$tablet: em(768);
+$mobile: em(480);
+
+// Colors
+$mainColor: #1f1f1f;
+
+$bgColorGray: #eeedec;
+$bgColorDarkGray: #1b1b1b;
+
+$tealColor: #53d6cc;
+$ltgrayColor: #e5e7e9;
+$midgrayColor: #626262;
+$darkgrayColor: #272727;

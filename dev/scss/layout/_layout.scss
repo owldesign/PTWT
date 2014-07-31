@@ -1,0 +1,9 @@
+// -------------------------------------
+// ★ Layout
+// -------------------------------------
+.site-inner {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  @include gridle_container();
+}
