@@ -2,7 +2,12 @@ loadApplication = ->
   styles = ["display: block","background: #f7cd81","color: white","padding: 20px 20px 20px 20px","text-align: center","font-weight: normal","font-size: 20px","line-height: 60px"].join(';')
   console.log '%c Periodic Table of Web Templates!', styles, 'Has loaded.'
   $(theTable)
+  $(mobileScripts)
 
+mobileScripts = ->
+  if Modernizr.touch
+    FastClick.attach(document.body)
+    
 theTable = ->
   overlay = $('.overlay')
   triggerBttn = $("trigger-overlay")
@@ -25,7 +30,7 @@ theTable = ->
     element = $('.available')
     element.on 'click', (e) ->
       target = $(@).data 'target'
-      yamlFile = "/content/table/" + target + ".yml"
+      yamlFile = "content/table/" + target + ".yml"
       YAML.load yamlFile, (result) ->
         source   = $('#project-details').html()
         template = Handlebars.compile(source)

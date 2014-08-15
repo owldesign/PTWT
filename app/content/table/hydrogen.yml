@@ -1,0 +1,13 @@
+element: "hydrogen"
+name: "Hydrogen"
+summary: "HTML5 Responsive one page template."
+demoUrl: "http://owl-design.net/demos/hydrogen/"
+downloadUrl: "https://github.com/owldesign/hydrogen/archive/master.zip"
+githubUrl: "https://github.com/owldesign/hydrogen"
+slides:
+  -
+    image: "hydrogen/hydrogen-1.jpg"
+  -
+    image: "hydrogen/hydrogen-2.jpg"
+  -
+    image: "hydrogen/hydrogen-3.jpg"

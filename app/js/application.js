@@ -1,11 +1,18 @@
 (function() {
-  var loadApplication, theTable;
+  var loadApplication, mobileScripts, theTable;
 
   loadApplication = function() {
     var styles;
     styles = ["display: block", "background: #f7cd81", "color: white", "padding: 20px 20px 20px 20px", "text-align: center", "font-weight: normal", "font-size: 20px", "line-height: 60px"].join(';');
     console.log('%c Periodic Table of Web Templates!', styles, 'Has loaded.');
-    return $(theTable);
+    $(theTable);
+    return $(mobileScripts);
+  };
+
+  mobileScripts = function() {
+    if (Modernizr.touch) {
+      return FastClick.attach(document.body);
+    }
   };
 
   theTable = function() {
@@ -31,7 +38,7 @@
       return element.on('click', function(e) {
         var target, yamlFile;
         target = $(this).data('target');
-        yamlFile = "/content/table/" + target + ".yml";
+        yamlFile = "content/table/" + target + ".yml";
         return YAML.load(yamlFile, function(result) {
           var source, template;
           source = $('#project-details').html();

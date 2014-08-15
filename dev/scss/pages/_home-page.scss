@@ -282,19 +282,20 @@ $columnHeight: 65px;
     margin: 15px 0;
     padding: 0;
     .swiper-pagination-switch {
-      position: relative;
+      display: inline-block;
+      @include size(10px);
+      border-radius: 180px;
+      background: none;
+      border: 2px solid white;
+      margin: 0 3px;
       cursor: pointer;
-      border: 1px solid $ltgrayColor;
-      &:before {
-        content: "";
-        display: block;
-        @include size(110%);
-        border: 2px solid lighten($ltgrayColor, 5);
-        border-radius: 180px;
-        @include position(absolute, -2px 0px 0px -2px);
+      @include box-sizing(border-box);
+      @include transition(all .3s ease-out);
+      &:hover {
+        background: rgba($tealColor, .4);
       }
-      &.swiper-active-switch { background: $tealColor; }
     }
+    .swiper-active-switch { background: $tealColor; }
   }
 }
 

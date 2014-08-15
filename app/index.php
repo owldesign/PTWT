@@ -67,7 +67,7 @@
 
       <section class="elements">
       <!-- <section class="row"> -->
-        <div class="element" data-target="hydrogen"><span class="element-name">hydrogen</span><span class="atomic-number">1</span><span class="element-symbol">H</span></div>
+        <div class="element available" data-target="hydrogen"><span class="element-name">hydrogen</span><span class="atomic-number">1</span><span class="element-symbol">H</span></div>
         <div class="empty"></div>
         <div class="empty"></div>
         <div class="empty"></div>
