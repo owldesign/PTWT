@@ -1,3 +1,6 @@
 [submodule "lithium"]
 	path = lithium
 	url = git@github.com:owldesign/lithium.git
+[submodule "hydrogen"]
+	path = hydrogen
+	url = git@github.com:owldesign/hydrogen.git
