@@ -3,11 +3,14 @@ loadApplication = ->
   console.log '%c Periodic Table of Web Templates!', styles, 'Has loaded.'
   $(theTable)
   $(mobileScripts)
+  [].slice.call(document.querySelectorAll("select.cs-select")).forEach (el) ->
+      new SelectFx(el)
+
 
 mobileScripts = ->
   if Modernizr.touch
     FastClick.attach(document.body)
-    
+
 theTable = ->
   overlay = $('.overlay')
   triggerBttn = $("trigger-overlay")

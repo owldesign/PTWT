@@ -6,7 +6,10 @@
     styles = ["display: block", "background: #f7cd81", "color: white", "padding: 20px 20px 20px 20px", "text-align: center", "font-weight: normal", "font-size: 20px", "line-height: 60px"].join(';');
     console.log('%c Periodic Table of Web Templates!', styles, 'Has loaded.');
     $(theTable);
-    return $(mobileScripts);
+    $(mobileScripts);
+    return [].slice.call(document.querySelectorAll("select.cs-select")).forEach(function(el) {
+      return new SelectFx(el);
+    });
   };
 
   mobileScripts = function() {

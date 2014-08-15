@@ -58,5 +58,8 @@ $copies:
       size: $fontSize;
     }
     line-height: $lineHeight;
+    @if $copy == "copy-02" {
+      color: lighten($midgrayColor, 40);
+    }
   }
 }

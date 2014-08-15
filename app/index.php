@@ -12,8 +12,8 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <link href="css/plugins.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="css/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="css/application.css" rel="stylesheet" type="text/css" />
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
   </head>
 
@@ -56,7 +56,7 @@
 
   <div class="site-inner">
     <section id="theTable">
-      <header>
+      <header class="banner">
         <figure class="logo">
           <img src="images/html-logo.png" />
           <figcaption>
@@ -255,6 +255,50 @@
         <div class="element" data-target="lawrencium"><span class="element-name">lawrencium</span><span class="atomic-number">103</span><span class="element-symbol">Lr</span></div>
       <!-- </section> -->
       </section>
+    </section>
+
+    <section id="info">
+      <article class="credit">
+        <header>
+          <h1 class="heading h-01">Credit</h1>
+          <p class="copy-01">Many times I will build a template based on inspiration that I get from our online community. So some of the tools/ideas I implement are built by others. I will try to credit everyone's work in the list bellow.</p>
+          <p class="copy-02">Check out plugins.js in each project for 3rd party libraries and their creators.</p>
+          <ul>
+            <li><a href="http://codyhouse.co/" target="_blank">Codyhouse.co</a></li>
+          </ul>
+        </header>
+      </article>
+
+      <article class="licence">
+        <header>
+          <h1 class="heading h-01">Licence</h1>
+          <p class="copy-01">Do what you want licence, within reason*. I use a few 3rd party libraries so please do check their licence agreements as well. </p>
+          <p class="copy-02">* For comercial purposes at least make significant changes, don't try to sell as is :)</p>
+        </header>
+      </article>
+
+      <article class="donation">
+        <header>
+          <h1 class="heading h-01">Donations <span> are welcome :)</h1>
+          <p class="copy-01">Some of these take long time to make, hopefully I can make all 118, at least that's the goal! If you'd like to send some $$ for the hardwork I'd appreciate it, A LOT!</p>
+        </header>
+
+        <div class="the-form">
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="NDY2ZX9Z3A4JS">
+          
+          <div class="input">
+            <input type="submit" class="paypal-submit" value="Donate via PayPal!" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          </div>
+
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+          </div>
+
+      </article>
     </section>
   </div>
 

@@ -7,7 +7,7 @@ $columnWidth: 53px;
 $columnHeight: 65px;
 
 .table-page {
-  header {
+  .banner {
     position: absolute;
     left: 140px;
     top: 70px;
@@ -56,7 +56,7 @@ $columnHeight: 65px;
 
 
   @include gridle_state(tablet) {
-    header {
+    .banner {
       width: 100%;
       @include position(relative, auto auto auto auto);
       margin: 30px auto;
@@ -68,7 +68,7 @@ $columnHeight: 65px;
   }
 
   @include gridle_state(mobile-alt) {
-    header {
+    .banner {
       width: 100%;
       @include position(relative, auto auto auto auto);
       margin: 30px auto;
@@ -84,7 +84,7 @@ $columnHeight: 65px;
   }
 
   @include gridle_state(mobile) {
-    header {
+    .banner {
       width: 100%;
       .logo {
         text-align: center;
@@ -100,6 +100,7 @@ $columnHeight: 65px;
   margin: 30px auto;
   @include gridle(12);
   @include gridle_no_gutter();
+  float: none !important;
   .elements { @include clearfix; }
   .elements > div {
     position: relative;
@@ -306,5 +307,73 @@ $columnHeight: 65px;
   }
   100% {
     @include transform(translateX(40px));
+  }
+}
+
+
+// -------------------------------------
+// ★ Info
+// -------------------------------------
+#info {
+  margin: 60px 0 0 0;
+  padding: 0 20px;
+  @include box-sizing(border-box);
+  @include clearfix;
+  // Credit
+  .credit {
+    margin-bottom: 40px;
+    ul { margin-top: 10px; margin-left: 20px;}
+    li {
+      font: {
+        family: $helvetica;
+        size: 13px;
+      }
+      list-style: circle;
+      padding: 4px 0;
+      a {
+        color: $darkgrayColor;
+      }
+    }
+
+  }
+
+  // Donation
+  .donation {
+    margin: 40px 0 100px 0;
+    .h-01 {
+      span {
+        font-size: 14px;
+      }
+    }
+    .the-form {
+      margin: 20px 0;
+    }
+    .input {
+      margin-bottom: 20px;
+      input {
+        font-size: 18px;
+        font-weight: 700;
+        color: #5b8583 !important;
+        &.amount {
+          max-width: 100px;
+        }
+        &.paypal-submit {
+          max-width: 250px;
+          cursor: pointer;
+          &:hover {
+            background: $darkgrayColor;
+            color: white !important;
+          }
+        }
+      }
+    }
+    label {
+      display: block;
+      font: {
+        family: $helvetica;
+        size: 14px;
+      }
+      padding-bottom: 8px;
+    }
   }
 }
